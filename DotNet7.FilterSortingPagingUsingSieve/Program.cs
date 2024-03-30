@@ -1,5 +1,5 @@
 using Sieve.Services;
-using DotNet7.FilterSortingPagingUsingSieve.DBContext;
+using DotNet7.FilterSortingPagingUsingSieve.Db;
 
 var builder = WebApplication.CreateBuilder(args);
 

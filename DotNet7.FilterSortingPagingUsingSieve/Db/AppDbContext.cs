@@ -1,6 +1,6 @@
 ﻿using DotNet7.FilterSortingPagingUsingSieve.Models;
 
-namespace DotNet7.FilterSortingPagingUsingSieve.DBContext
+namespace DotNet7.FilterSortingPagingUsingSieve.Db
 {
     public class AppDbContext
     {

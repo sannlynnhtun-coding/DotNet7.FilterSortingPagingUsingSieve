@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Sieve.Models;
 using Sieve.Services;
 using System.Reflection;
-using DotNet7.FilterSortingPagingUsingSieve.DBContext;
+using DotNet7.FilterSortingPagingUsingSieve.Db;
 
 namespace DotNet7.FilterSortingPagingUsingSieve.Controllers
 {
@@ -21,7 +21,7 @@ namespace DotNet7.FilterSortingPagingUsingSieve.Controllers
 
         [Route("GetProducts")]
         [HttpGet]
-        public async Task<IActionResult> GetProducts([FromQuery] SieveModel model)
+        public IActionResult GetProducts([FromQuery] SieveModel model)
         {
             var products = db.Products.AsQueryable();
             products = sieveProcessor.Apply(model, products);
